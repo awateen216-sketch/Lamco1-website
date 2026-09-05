@@ -1,143 +1,277 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="htmlRoot">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lamco1 Steel Factory | مصنع لامكو الأول للحديد</title>
+    <title>Lamco1 Industrial Ltd | مصنع لامكو الأول للحديد</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>body { font-family: 'Cairo', sans-serif; }</style>
 </head>
 <body class="bg-slate-950 text-slate-100">
 
-    <!-- Header -->
-    <header class="bg-slate-900/80 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Header with Official Logo -->
+    <header class="bg-slate-900/90 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <span class="text-2xl font-black text-amber-500 tracking-wider">LAMCO 1</span>
-                <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-1 rounded">STEEL FACTORY</span>
+                <img src="تصميم بدون عنوان.png" alt="Lamco 1 Industrial Ltd Logo" class="h-14 w-auto">
             </div>
             <nav class="hidden md:flex gap-6 text-sm font-semibold">
-                <a href="#about" class="hover:text-amber-400 transition">عن المصنع</a>
-                <a href="#tables" class="hover:text-amber-400 transition">الجداول الفنية</a>
-                <a href="#contact" class="hover:text-amber-400 transition">اتصل بنا</a>
+                <a href="#catalog" class="hover:text-amber-400 transition" data-ar="الكتالوج المرئي" data-en="Visual Catalog">الكتالوج المرئي</a>
+                <a href="#system" class="hover:text-amber-400 transition" data-ar="نظام الجدران" data-en="Partition System">نظام الجدران</a>
+                <a href="#tables" class="hover:text-amber-400 transition" data-ar="الجداول الفنية" data-en="Technical Tables">الجداول الفنية</a>
+                <a href="#contact" class="hover:text-amber-400 transition" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
             </nav>
-            <a href="tel:0505580244" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-sm transition">اتصل الآن</a>
+            <div class="flex items-center gap-3">
+                <button onclick="toggleLanguage()" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 px-3 py-1.5 rounded-lg text-xs font-bold transition">
+                    🌐 <span id="langBtnText">English</span>
+                </button>
+                <a href="tel:0505580244" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-sm transition" data-ar="اتصل الآن" data-en="Call Now">اتصل الآن</a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section with Image Background -->
+    <!-- Hero Section -->
     <section class="relative bg-slate-900 py-24 border-b border-slate-800 overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80" alt="Steel Factory" class="w-full h-full object-cover">
+        <div class="absolute inset-0 opacity-25">
+            <img src="Rust spots on the surface - How to tackle them.jpg" alt="Lamco 1 Warehouse & Steel Coils" class="w-full h-full object-cover">
         </div>
         <div class="relative max-w-7xl mx-auto px-4 text-center">
-            <span class="text-amber-400 font-bold tracking-widest uppercase text-sm bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">From Innovation to Execution</span>
-            <h1 class="text-4xl md:text-6xl font-black mt-4 mb-6">شريكك الموثوق في <span class="text-amber-500">تصنيع الحديد والإنشاءات</span></h1>
-            <p class="text-slate-300 max-w-2xl mx-auto text-lg mb-8">نختص في قص لفائف الصلب، تصنيع قطاعات الدري وال (Runners & Studs)، الكيبل تراي، والأكواب والزوايا الإنشائية بمدينة جدة الصناعية الثالثة.</p>
-            <div class="flex justify-center gap-4">
-                <a href="#tables" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-6 py-3 rounded-xl font-bold transition shadow-lg shadow-amber-600/20">استعراض الجداول والمنتجات</a>
-                <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-xl font-bold transition border border-slate-700">تواصل معنا</a>
-            </div>
+            <span class="text-amber-400 font-bold tracking-widest uppercase text-sm bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">LAMCO 1 INDUSTRIAL LTD</span>
+            <h1 class="text-4xl md:text-6xl font-black mt-4 mb-6" data-ar="شريكك الموثوق في تصنيع الحديد والإنشاءات" data-en="Your Trusted Partner in Steel & Construction">شريكك الموثوق في <span class="text-amber-500">تصنيع الحديد والإنشاءات</span></h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-lg mb-8" data-ar="متخصصون في تشكيل لفائف الصلب، أنظمة الجدران الجبسية، قطاعات الدري وال، والملحقات الهندسية بجدة." data-en="Specialized in steel coil roll forming, drywall partition systems, profiles and accessories in Jeddah.">متخصصون في تشكيل لفائف الصلب، أنظمة الجدران الجبسية، قطاعات الدري وال، والملحقات الهندسية بجدة.</p>
         </div>
     </section>
 
-    <!-- Visual Showcase Section -->
-    <section class="py-16 max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
-            <div>
-                <span class="text-amber-400 text-sm font-bold tracking-wider">التميز الصناعي</span>
-                <h2 class="text-3xl font-black mt-2 mb-4">دقة التصنيع ومطابقة المواصفات العالمية</h2>
-                <p class="text-slate-400 mb-6">نعتمد في مصنع لامكو الأول أحدث التقنيات لإنتاج قطاعات الحديد الإنشائية والدري وال وفق معايير ASTM C645 و ASTM A653، مع توفير خيارات طلاء متميزة (G40, G60, G90).</p>
-                <ul class="space-y-3 text-slate-300 text-sm font-semibold">
-                    <li class="flex items-center gap-2">✓ قص وتشكيل لفائف الصلب بدقة متناهية</li>
-                    <li class="flex items-center gap-2">✓ طاقة إنتاجية عالية تخدم المشاريع الكبرى</li>
-                    <li class="flex items-center gap-2">✓ الالتزام بالمواعيد وجودة التحمل الهيكلي</li>
-                </ul>
+    <!-- Visual Catalog Section -->
+    <section id="catalog" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black mb-3" data-ar="الكتالوج المرئي للمنتجات والخطوط" data-en="Visual Product & Line Catalog">الكتالوج المرئي للمنتجات والخطوط</h2>
+            <p class="text-slate-400" data-ar="عرض تفصيلي لأبرز خطوط الإنتاج والملحقات المعتمدة" data-en="Detailed overview of our production lines and certified accessories">عرض تفصيلي لأبرز خطوط الإنتاج والملحقات المعتمدة</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Featured Coils Warehouse Item -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition md:col-span-2 lg:col-span-1">
+                <img src="Rust spots on the surface - How to tackle them.jpg" alt="Steel Coils Warehouse" class="w-full h-48 object-cover bg-slate-950">
+                <div class="p-5">
+                    <span class="text-amber-400 text-xs font-bold">Steel Coil Inventory</span>
+                    <h3 class="text-lg font-bold mt-1 mb-2" data-ar="مستودع لفائف الصلب والمناولة الآلية" data-en="Steel Coils Warehouse & Overhead Cranes">مستودع لفائف الصلب والمناولة</h3>
+                    <p class="text-slate-400 text-xs" data-ar="مساحات تخزين ضخمة مجهزة برافعات علوية لتنظيم وتخزين لفائف الصلب بأعلى معايير الجودة." data-en="Massive storage areas equipped with overhead cranes for steel coils.">مساحات تخزين ضخمة مجهزة برافعات علوية لتنظيم وتخزين لفائف الصلب بأعلى معايير الجودة.</p>
+                </div>
             </div>
-            <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Industrial Manufacturing" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+
+            <!-- Item 1: Roll Forming Machine -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition">
+                <img src="IMG_5126.jpg" alt="Roll Forming Machine" class="w-full h-48 object-cover bg-slate-950">
+                <div class="p-5">
+                    <span class="text-amber-400 text-xs font-bold">Roll Forming Line</span>
+                    <h3 class="text-lg font-bold mt-1 mb-2" data-ar="خطوط تشكيل لفائف الصلب الآلية" data-en="Automatic Roll Forming Line">خطوط تشكيل لفائف الصلب</h3>
+                    <p class="text-slate-400 text-xs" data-ar="ماكينات متطورة لقص وتشكيل القطاعات الفولاذية بدقة وعالية السرعة." data-en="Advanced machines for precise and high-speed steel profile forming.">ماكينات متطورة لقص وتشكيل القطاعات الفولاذية بدقة وعالية السرعة.</p>
+                </div>
+            </div>
+
+            <!-- Item 2: Assembly System -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition">
+                <img src="IMG_5136.jpg" alt="Assembly System" class="w-full h-48 object-cover bg-slate-950">
+                <div class="p-5">
+                    <span class="text-amber-400 text-xs font-bold">Partition Components</span>
+                    <h3 class="text-lg font-bold mt-1 mb-2" data-ar="أنظمة تجميع الجدران الجبسية" data-en="Drywall Assembly Systems">أنظمة تجميع الجدران الجبسية</h3>
+                    <p class="text-slate-400 text-xs" data-ar="مكونات متكاملة تشمل القوائم، العداءات، والعزل لضمان متانة الجدران." data-en="Integrated components including studs, tracks, and insulation.">مكونات متكاملة تشمل القوائم، العداءات، والعزل لضمان متانة الجدران.</p>
+                </div>
+            </div>
+
+            <!-- Item 3: Profiles Dimension (IMG_5175) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition">
+                <img src="IMG_5175.JPG" alt="Profiles Dimensions" class="w-full h-48 object-cover bg-slate-950">
+                <div class="p-5">
+                    <span class="text-amber-400 text-xs font-bold">Profiles & L-Bead</span>
+                    <h3 class="text-lg font-bold mt-1 mb-2" data-ar="مقاسات قطاعات الدري وال وزوايا L" data-en="Profiles & L-Bead Dimensions">مقاسات القطاعات وزوايا التشطيب</h3>
+                    <p class="text-slate-400 text-xs" data-ar="تصاميم هندسية دقيقة لتلبية متطلبات التحمل والتركيب المعماري." data-en="Precise engineering designs to meet structural requirements.">تصاميم هندسية دقيقة لتلبية متطلبات التحمل والتركيب المعماري.</p>
+                </div>
+            </div>
+
+            <!-- Item 4: Wall Structure & Doors (IMG_5177) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition">
+                <img src="IMG_5177.jpg" alt="Wall & Door Framing" class="w-full h-48 object-cover bg-slate-950">
+                <div class="p-5">
+                    <span class="text-amber-400 text-xs font-bold">Framing Structure</span>
+                    <h3 class="text-lg font-bold mt-1 mb-2" data-ar="هياكل الأبواب والنوافذ المعدنية" data-en="Door & Window Metal Framing">هياكل الأبواب والنوافذ المعدنية</h3>
+                    <p class="text-slate-400 text-xs" data-ar="دعم إضافي وتثبيت متين لإطارات الفتحات والأبواب داخل الجدران." data-en="Additional support and sturdy framing for openings and doors.">دعم إضافي وتثبيت متين لإطارات الفتحات والأبواب داخل الجدران.</p>
+                </div>
+            </div>
+
+            <!-- Item 5: Double Layer Wall System (IMG_5179) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition">
+                <img src="IMG_5179.jpg" alt="Acoustic Wall System" class="w-full h-48 object-cover bg-slate-950">
+                <div class="p-5">
+                    <span class="text-amber-400 text-xs font-bold">Acoustic & Fire Wall</span>
+                    <h3 class="text-lg font-bold mt-1 mb-2" data-ar="أنظمة الجدران المزدوجة العازلة" data-en="Double Layer Acoustic Walls">أنظمة الجدران المزدوجة العازلة</h3>
+                    <p class="text-slate-400 text-xs" data-ar="طبقات عزل صوتي وحراري مع تفاصيل تثبيت المسامير والمسافات الفنية." data-en="Acoustic and thermal insulation layers with precise fastening details.">طبقات عزل صوتي وحراري مع تفاصيل تثبيت المسامير والمسافات الفنية.</p>
+                </div>
+            </div>
+
+            <!-- Item 6: Suspended Ceiling System (IMG_5185) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition">
+                <img src="IMG_5185.JPG" alt="Suspended Ceiling System" class="w-full h-48 object-cover bg-slate-950">
+                <div class="p-5">
+                    <span class="text-amber-400 text-xs font-bold">Suspension System</span>
+                    <h3 class="text-lg font-bold mt-1 mb-2" data-ar="أنظمة الأسقف المستعارة والتعليق" data-en="Suspended Ceiling Systems">أنظمة الأسقف المستعارة والتعليق</h3>
+                    <p class="text-slate-400 text-xs" data-ar="قنوات رئيسية وفرعية مع قضبان تعليق قابلة للتعديل ومشبك الفراشة." data-en="Main and furring channels with adjustable rod hangers and butterfly clips.">قنوات رئيسية وفرعية مع قضبان تعليق قابلة للتعديل ومشبك الفراشة.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Drywall Partition System Specs (From PDF) -->
+    <section id="system" class="py-16 bg-slate-900/30 border-t border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black mb-3" data-ar="نظام الجدران الجبسية (المتطلبات التقريبية لكل 100 متر مربع)" data-en="Drywall Partition System (Approx Requirements Per 100m2)">نظام الجدران الجبسية (متطلبات كل 100 متر مربع)[cite: 2]</h2>
+                <p class="text-slate-400" data-ar="مواصفات المكونات والكميات القياسية للمشاريع الهندسية" data-en="Components specifications and standard quantities for engineering projects">مواصفات المكونات والكميات القياسية للمشاريع الهندسية</p>
+            </div>
+
+            <div class="overflow-x-auto bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-lg">
+                <table class="w-full text-right text-sm">
+                    <thead>
+                        <tr class="border-b border-slate-800 text-slate-400">
+                            <th class="py-3 px-4" data-ar="المكون" data-en="Material">المكون[cite: 2]</th>
+                            <th class="py-3 px-4" data-ar="الوظيفة" data-en="Function">الوظيفة[cite: 2]</th>
+                            <th class="py-3 px-4" data-ar="المقاسات" data-en="Size">المقاسات[cite: 2]</th>
+                            <th class="py-3 px-4" data-ar="الكمية لكل 100م²" data-en="Quantity Per 100m2">الكمية لكل 100م²[cite: 2]</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 text-slate-200">
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-amber-400" data-ar="ألواح الجبس (Plasterboard)" data-en="Plasterboard">ألواح الجبس[cite: 2]</td>
+                            <td class="py-3 px-4" data-ar="تغطية هيكل الجدران" data-en="Facing of partition system">تغطية هيكل الجدران[cite: 2]</td>
+                            <td class="py-3 px-4">1200×2400 أو 3000 مم (سمك 9.5, 12.5, 15 مم)[cite: 2]</td>
+                            <td class="py-3 px-4" data-ar="حسب النظام" data-en="Varies based on system">حسب النظام[cite: 2]</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-amber-400" data-ar="عداء مجلفن (Galvanized Runner)" data-en="Galvanized Runner">عداء مجلفن[cite: 2]</td>
+                            <td class="py-3 px-4" data-ar="القطاع الداعم الرئيسي لتثبيت الألواح" data-en="Main supporting section">القطاع الداعم الرئيسي[cite: 2]</td>
+                            <td class="py-3 px-4">العرض: 42-200مم، الطول: 3م، السمك: 0.35-1.5مم[cite: 2]</td>
+                            <td class="py-3 px-4">66 متر طولي (LM)[cite: 2]</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-amber-400" data-ar="قوائم رأسية (Galvanized Stud)" data-en="Galvanized Stud">قوائم رأسية[cite: 2]</td>
+                            <td class="py-3 px-4" data-ar="الإطار الرأسي للجدران" data-en="Vertical frame of partition">الإطار الرأسي للجدران[cite: 2]</td>
+                            <td class="py-3 px-4">العرض: 42-200مم، الطول: 3م، السمك: 0.35-1.5مم[cite: 2]</td>
+                            <td class="py-3 px-4">200 متر طولي (LM)[cite: 2]</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-amber-400" data-ar="شريط الوصلات (Joint Tape)" data-en="Drywall Joint Tape">شريط الوصلات[cite: 2]</td>
+                            <td class="py-3 px-4" data-ar="تعزيز الوصلات والحواف" data-en="Enforcing tapered edge joints">تعزيز الوصلات والحواف[cite: 2]</td>
+                            <td class="py-3 px-4">50 مم × 90 متر[cite: 2]</td>
+                            <td class="py-3 px-4">150 متر طولي (LM)[cite: 2]</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-amber-400" data-ar="كلبسات التعليق (Hanger Clips)" data-en="Wiring Connecting Clips">كلبسات الوصل والتعليق[cite: 2]</td>
+                            <td class="py-3 px-4" data-ar="ربط قنوات الفورينج بالقنوات الرئيسية" data-en="Connecting furring channels">ربط القنوات والأسقف المستعارة[cite: 2]</td>
+                            <td class="py-3 px-4">38 × 2.5 مم[cite: 2]</td>
+                            <td class="py-3 px-4">420 قطعة (EA)[cite: 2]</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
     <!-- Technical Tables Section -->
-    <section id="tables" class="py-16 bg-slate-900/50 border-t border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-black mb-3">الجداول الفنية وأكواد المنتجات (Drywall & Ceilings)</h2>
-                <p class="text-slate-400">المقاسات المعتمدة والمطابقة للمواصفات القياسية</p>
-            </div>
+    <section id="tables" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black mb-3" data-ar="الجداول الفنية وأكواد المقاسات" data-en="Technical Tables & Sizes">الجداول الفنية وأكواد المقاسات</h2>
+            <p class="text-slate-400">ASTM C645 & ASTM A653</p>
+        </div>
 
-            <!-- Runners Table -->
-            <div class="mb-12 overflow-x-auto bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-lg">
-                <h3 class="text-lg font-bold text-amber-400 mb-4 px-2">1. جدول مقاسات عداءات الجدران والأسقف (Runner Codes - RNR)</h3>
-                <table class="w-full text-right text-sm">
-                    <thead>
-                        <tr class="border-b border-slate-800 text-slate-400">
-                            <th class="py-3 px-4">الكود (Code)</th>
-                            <th class="py-3 px-4">المقاس (Size)</th>
-                            <th class="py-3 px-4">الطول القياسي</th>
-                            <th class="py-3 px-4">المواصفات</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-800 text-slate-200">
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 042</td><td class="py-3 px-4">42 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / Pre-galvanized</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 048</td><td class="py-3 px-4">48 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / Pre-galvanized</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 063</td><td class="py-3 px-4">63 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / Pre-galvanized</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 070</td><td class="py-3 px-4">70 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / Pre-galvanized</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 075</td><td class="py-3 px-4">75 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / Pre-galvanized</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 092</td><td class="py-3 px-4">92 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / Pre-galvanized</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 100</td><td class="py-3 px-4">100 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / Pre-galvanized</td></tr>
-                    </tbody>
-                </table>
-            </div>
+        <!-- Runners Table -->
+        <div class="mb-12 overflow-x-auto bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-lg">
+            <h3 class="text-lg font-bold text-amber-400 mb-4 px-2" data-ar="1. جدول عداءات الجدران (RNR)" data-en="1. Wall Runners (RNR)">1. جدول عداءات الجدران (RNR)</h3>
+            <table class="w-full text-right text-sm">
+                <thead>
+                    <tr class="border-b border-slate-800 text-slate-400">
+                        <th class="py-3 px-4" data-ar="الكود" data-en="Code">الكود</th>
+                        <th class="py-3 px-4" data-ar="المقاس" data-en="Size">المقاس</th>
+                        <th class="py-3 px-4" data-ar="الطول القياسي" data-en="Standard Length">الطول القياسي</th>
+                        <th class="py-3 px-4" data-ar="المواصفات" data-en="Specs">المواصفات</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 text-slate-200">
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 042</td><td class="py-3 px-4">42 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 048</td><td class="py-3 px-4">48 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 063</td><td class="py-3 px-4">63 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 070</td><td class="py-3 px-4">70 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">RNR 092</td><td class="py-3 px-4">92 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-            <!-- Studs Table -->
-            <div class="overflow-x-auto bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-lg">
-                <h3 class="text-lg font-bold text-amber-400 mb-4 px-2">2. جدول مقاسات القوائم الرأسية للجدران (Stud Codes - STD)</h3>
-                <table class="w-full text-right text-sm">
-                    <thead>
-                        <tr class="border-b border-slate-800 text-slate-400">
-                            <th class="py-3 px-4">الكود (Code)</th>
-                            <th class="py-3 px-4">المقاس (Size)</th>
-                            <th class="py-3 px-4">الطول القياسي</th>
-                            <th class="py-3 px-4">المواصفات</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-800 text-slate-200">
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">STD 041</td><td class="py-3 px-4">41 مم</td><td class="py-3 px-4">3 متر (حتى 6 متر حسب الطلب)</td><td class="py-3 px-4">ASTM C645 / High Strength</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">STD 047</td><td class="py-3 px-4">47 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / High Strength</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">STD 064</td><td class="py-3 px-4">64 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / High Strength</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">STD 073</td><td class="py-3 px-4">73 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / High Strength</td></tr>
-                        <tr><td class="py-3 px-4 font-bold text-amber-400">STD 091</td><td class="py-3 px-4">91 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645 / High Strength</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
+        <!-- Studs Table -->
+        <div class="overflow-x-auto bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-lg">
+            <h3 class="text-lg font-bold text-amber-400 mb-4 px-2" data-ar="2. جدول القوائم الرأسية (STD)" data-en="2. Studs (STD)">2. جدول القوائم الرأسية (STD)</h3>
+            <table class="w-full text-right text-sm">
+                <thead>
+                    <tr class="border-b border-slate-800 text-slate-400">
+                        <th class="py-3 px-4" data-ar="الكود" data-en="Code">الكود</th>
+                        <th class="py-3 px-4" data-ar="المقاس" data-en="Size">المقاس</th>
+                        <th class="py-3 px-4" data-ar="الطول القياسي" data-en="Standard Length">الطول القياسي</th>
+                        <th class="py-3 px-4" data-ar="المواصفات" data-en="Specs">المواصفات</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 text-slate-200">
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">STD 041</td><td class="py-3 px-4">41 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">STD 047</td><td class="py-3 px-4">47 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">STD 064</td><td class="py-3 px-4">64 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                    <tr><td class="py-3 px-4 font-bold text-amber-400">STD 091</td><td class="py-3 px-4">91 مم</td><td class="py-3 px-4">3 متر</td><td class="py-3 px-4">ASTM C645</td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-black mb-6">تواصل مع مصنع لامكو الأول للحديد</h2>
-        <p class="text-slate-400 mb-8">جدة، المدينة الصناعية الثالثة، المملكة العربية السعودية</p>
+        <h2 class="text-3xl font-black mb-6" data-ar="تواصل مع مصنع لامكو الأول للحديد" data-en="Contact Lamco 1 Steel Factory">تواصل مع مصنع لامكو الأول للحديد</h2>
+        <p class="text-slate-400 mb-8" data-ar="جدة، المدينة الصناعية الثالثة، المملكة العربية السعودية" data-en="Jeddah, 3rd Industrial City, KSA">جدة، المدينة الصناعية الثالثة، المملكة العربية السعودية</p>
         <div class="flex flex-col md:flex-row justify-center gap-6 text-sm">
             <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                <span class="block text-slate-400 mb-1">الهاتف</span>
+                <span class="block text-slate-400 mb-1" data-ar="الهاتف" data-en="Phone">الهاتف</span>
                 <a href="tel:0505580244" class="font-bold text-amber-400 text-lg">0505580244</a>
             </div>
             <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                <span class="block text-slate-400 mb-1">البريد الإلكتروني</span>
+                <span class="block text-slate-400 mb-1" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
                 <a href="mailto:lamco@outlook.sa" class="font-bold text-amber-400 text-lg">lamco@outlook.sa</a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-950 py-6 text-center text-xs text-slate-500 border-t border-slate-900">
-        جميع الحقوق محفوظة © 2026 LAMCO1 STEEL FACTORY Ltd.
+    <footer class="bg-slate-950 py-6 text-center text-xs text-slate-500 border-t border-slate-900" data-ar="جميع الحقوق محفوظة © 2026 LAMCO 1 INDUSTRIAL LTD." data-en="All Rights Reserved © 2026 LAMCO 1 INDUSTRIAL LTD.">
+        جميع الحقوق محفوظة © 2026 LAMCO 1 INDUSTRIAL LTD.
     </footer>
 
+    <!-- Translation Script -->
+    <script>
+        let currentLang = 'ar';
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const htmlRoot = document.getElementById('htmlRoot');
+            const langBtnText = document.getElementById('langBtnText');
+            
+            if (currentLang === 'en') {
+                htmlRoot.setAttribute('lang', 'en');
+                htmlRoot.setAttribute('dir', 'ltr');
+                langBtnText.innerText = 'عربي';
+            } else {
+                htmlRoot.setAttribute('lang', 'ar');
+                htmlRoot.setAttribute('dir', 'rtl');
+                langBtnText.innerText = 'English';
+            }
+
+            document.querySelectorAll('[data-ar]').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+        }
+    </script>
 </body>
 </html>
-  
