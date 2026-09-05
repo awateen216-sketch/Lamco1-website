@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lamco1 Industrial Ltd | مصنع لامكو الأول للحديد</title>
+    <title>Lamco 1 Steel Factory | مصنع لامكو الأول للحديد</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>body { font-family: 'Cairo', sans-serif; }</style>
 </head>
 <body class="bg-slate-950 text-slate-100">
 
-    <!-- Header -->
+    <!-- Header & Navigation -->
     <header class="bg-slate-900/90 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <img src="تصميم بدون عنوان.png" alt="Lamco 1 Logo" class="h-14 w-auto">
             </div>
             <nav class="hidden md:flex gap-6 text-sm font-semibold">
-                <a href="#catalog" class="hover:text-amber-400 transition" data-ar="الكتالوج والمنتجات" data-en="Products & Catalog">الكتالوج والمنتجات</a>
+                <a href="#store" class="hover:text-amber-400 transition" data-ar="المتجر والكتالوج" data-ar="المتجر والكتالوج" data-en="Store & Catalog">المتجر والكتالوج</a>
                 <a href="#system" class="hover:text-amber-400 transition" data-ar="نظام الجدران" data-en="Partition System">نظام الجدران</a>
                 <a href="#tables" class="hover:text-amber-400 transition" data-ar="الجداول الفنية" data-en="Technical Tables">الجداول الفنية</a>
                 <a href="#contact" class="hover:text-amber-400 transition" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
@@ -26,9 +26,8 @@
                 <button onclick="toggleLanguage()" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 px-3 py-1.5 rounded-lg text-xs font-bold transition">
                     🌐 <span id="langBtnText">English</span>
                 </button>
-                <!-- Cart Button -->
                 <button onclick="toggleCartModal()" class="relative bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded-lg text-sm transition flex items-center gap-2">
-                    🛒 <span data-ar="السلة" data-en="Cart">السلة</span>
+                    🛒 <span data-ar="سلة الطلبات" data-en="Cart">سلة الطلبات</span>
                     <span id="cartCount" class="bg-slate-950 text-amber-400 text-xs px-2 py-0.5 rounded-full font-black">0</span>
                 </button>
             </div>
@@ -38,127 +37,145 @@
     <!-- Hero Section -->
     <section class="relative bg-slate-900 py-24 border-b border-slate-800 overflow-hidden">
         <div class="absolute inset-0 opacity-25">
-            <img src="Rust spots on the surface - How to tackle them.jpg" alt="Warehouse" class="w-full h-full object-cover">
+            <img src="Rust spots on the surface - How to tackle them.jpg" alt="Lamco 1 Warehouse" class="w-full h-full object-cover">
         </div>
         <div class="relative max-w-7xl mx-auto px-4 text-center">
-            <span class="text-amber-400 font-bold tracking-widest uppercase text-sm bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">LAMCO 1 INDUSTRIAL LTD</span>
-            <h1 class="text-4xl md:text-6xl font-black mt-4 mb-6" data-ar="متجر المنتجات وطلب القطاعات الفولاذية" data-en="Products Store & Steel Profiles Ordering">متجر المنتجات وطلب <span class="text-amber-500">القطاعات الفولاذية</span></h1>
-            <p class="text-slate-300 max-w-2xl mx-auto text-lg mb-8" data-ar="اختر منتجاتك المطلوبة، أضفها للسلة، وأرسل طلبك مباشرة لتنفيذه بأعلى معايير الجودة." data-en="Select your required products, add them to cart, and send your order directly.">اختر منتجاتك المطلوبة، أضفها للسلة، وأرسل طلبك مباشرة لتنفيذه بأعلى معايير الجودة.</p>
+            <span class="text-amber-400 font-bold tracking-widest uppercase text-sm bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">LAMCO 1 STEEL FACTORY LTD</span>
+            <h1 class="text-4xl md:text-6xl font-black mt-4 mb-6" data-ar="الكتالوج الرقمي والمتجر الإلكتروني للقطاعات الفولاذية" data-en="Digital Catalog & E-Commerce Store for Steel Profiles">الكتالوج الرقمي والمتجر الإلكتروني <span class="text-amber-500">للحديد والقطاعات</span></h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-lg mb-8" data-ar="استعرض منتجات المصنع، أضفها للسلة، واطلب مباشرة بأعلى المواصفات القياسية." data-en="Browse factory products, add to cart, and order directly with highest standards.">استعرض منتجات المصنع، أضفها للسلة، واطلب مباشرة بأعلى المواصفات القياسية.</p>
         </div>
     </section>
 
-    <!-- Products Store Section -->
-    <section id="catalog" class="py-16 max-w-7xl mx-auto px-4">
+    <!-- Store & Products Catalog Section -->
+    <section id="store" class="py-16 max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-black mb-3" data-ar="قائمة المنتجات المتاحة للطلب" data-en="Available Products for Order">قائمة المنتجات المتاحة للطلب</h2>
-            <p class="text-slate-400" data-ar="اضغط على زر (أضف للسلة) لتحديد الكميات المطلوبة" data-en="Click 'Add to Cart' to specify required quantities">اضغط على زر (أضف للسلة) لتحديد الكميات المطلوبة</p>
+            <h2 class="text-3xl font-black mb-3" data-ar="معرض المنتجات وخطوط الإنتاج" data-en="Products & Production Lines Gallery">معرض المنتجات وخطوط الإنتاج</h2>
+            <p class="text-slate-400" data-ar="اختر المنتج المطلوب وأضفه إلى السلة لتأكيد طلبك" data-en="Select the required product and add it to your cart">اختر المنتج المطلوب وأضفه إلى السلة لتأكيد طلبك</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Product 1 -->
+            <!-- Product 1: Warehouse & Coils -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
-                    <img src="IMG_5126.jpg" alt="Roll Forming Line" class="w-full h-48 object-cover bg-slate-950">
+                    <img src="Rust spots on the surface - How to tackle them.jpg" alt="Steel Coils Warehouse" class="w-full h-48 object-cover bg-slate-950">
                     <div class="p-5">
-                        <span class="text-amber-400 text-xs font-bold">Roll Forming Line</span>
-                        <h3 class="text-lg font-bold mt-1 mb-2">خطوط تشكيل لفائف الصلب</h3>
-                        <p class="text-slate-400 text-xs mb-4">ماكينات متطورة لقص وتشكيل القطاعات الفولاذية بدقة عالية.</p>
-                        <div class="text-amber-400 font-bold mb-4">السعر: حسب الطلب والمواصفات</div>
+                        <span class="text-amber-400 text-xs font-bold">Steel Inventory</span>
+                        <h3 class="text-lg font-bold mt-1 mb-2">لفائف الصلب ومستودع المصنع</h3>
+                        <p class="text-slate-400 text-xs mb-4">لفائف صلب عالية الجودة مخزنة وجاهزة للتشكيل حسب الطلب.</p>
+                        <div class="text-amber-400 font-bold mb-4 text-sm">حسب المواصفات والكمية</div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addToCart('خطوط تشكيل لفائف الصلب', 'حسب الطلب')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                    <button onclick="addToCart('لفائف الصلب ومستودع المصنع', 'حسب المواصفات')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
             </div>
 
-            <!-- Product 2 -->
+            <!-- Product 2: Roll Forming Line -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
+                <div>
+                    <img src="IMG_5126.jpg" alt="Roll Forming Machine" class="w-full h-48 object-cover bg-slate-950">
+                    <div class="p-5">
+                        <span class="text-amber-400 text-xs font-bold">Roll Forming Line</span>
+                        <h3 class="text-lg font-bold mt-1 mb-2">خط تشكيل القطاعات الفولاذية</h3>
+                        <p class="text-slate-400 text-xs mb-4">تشكيل آلي دقيق لقطاعات الجدران والأسقف بالمقاسات المطلوبة.</p>
+                        <div class="text-amber-400 font-bold mb-4 text-sm">حسب المقاس والأطوال</div>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="addToCart('خط تشكيل القطاعات الفولاذية', 'حسب المقاس والأطوال')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                        أضف إلى السلة 🛒
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3: Partition Components -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
                     <img src="IMG_5136.jpg" alt="Partition Components" class="w-full h-48 object-cover bg-slate-950">
                     <div class="p-5">
-                        <span class="text-amber-400 text-xs font-bold">Partition Components</span>
-                        <h3 class="text-lg font-bold mt-1 mb-2">أنظمة تجميع الجدران الجبسية</h3>
-                        <p class="text-slate-400 text-xs mb-4">مكونات متكاملة تشمل القوائم، العداءات، والعزل لضمان المتانة.</p>
-                        <div class="text-amber-400 font-bold mb-4">السعر: قياسي لكل 100م²</div>
+                        <span class="text-amber-400 text-xs font-bold">Partition System</span>
+                        <h3 class="text-lg font-bold mt-1 mb-2">مكونات أنظمة الجدران الجبسية</h3>
+                        <p class="text-slate-400 text-xs mb-4">حزم متكاملة من القوائم والعداءات والملحقات الهندسية.</p>
+                        <div class="text-amber-400 font-bold mb-4 text-sm">بناءً على مساحة المشروع (م²)</div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addToCart('أنظمة تجميع الجدران الجبسية', 'حسب المقاسات')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                    <button onclick="addToCart('مكونات أنظمة الجدران الجبسية', 'حسب مساحة المشروع')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
             </div>
 
-            <!-- Product 3 -->
+            <!-- Product 4: Profiles & L-Bead -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
-                    <img src="IMG_5175.JPG" alt="Profiles & L-Bead" class="w-full h-48 object-cover bg-slate-950">
+                    <img src="IMG_5175.JPG" alt="Profiles Dimensions" class="w-full h-48 object-cover bg-slate-950">
                     <div class="p-5">
                         <span class="text-amber-400 text-xs font-bold">Profiles & L-Bead</span>
-                        <h3 class="text-lg font-bold mt-1 mb-2">مقاسات القطاعات وزوايا التشطيب</h3>
-                        <p class="text-slate-400 text-xs mb-4">تصاميم هندسية دقيقة لتلبية متطلبات التحمل المعماري.</p>
-                        <div class="text-amber-400 font-bold mb-4">السعر: حسب الأكواد ASTM</div>
+                        <h3 class="text-lg font-bold mt-1 mb-2">مقاسات القطاعات وزوايا L</h3>
+                        <p class="text-slate-400 text-xs mb-4">قطاعات وزوايا تشطيب مطابقة لأكواد الجودة ASTM العالمية.</p>
+                        <div class="text-amber-400 font-bold mb-4 text-sm">حسب الكود والمقاس</div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addToCart('مقاسات القطاعات وزوايا التشطيب', 'حسب الأكواد')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                    <button onclick="addToCart('مقاسات القطاعات وزوايا L', 'حسب الكود والمقاس')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
             </div>
 
-            <!-- Product 4 -->
+            <!-- Product 5: Wall & Door Framing -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
-                    <img src="IMG_5177.jpg" alt="Framing Structure" class="w-full h-48 object-cover bg-slate-950">
+                    <img src="IMG_5177.jpg" alt="Wall & Door Framing" class="w-full h-48 object-cover bg-slate-950">
                     <div class="p-5">
                         <span class="text-amber-400 text-xs font-bold">Framing Structure</span>
-                        <h3 class="text-lg font-bold mt-1 mb-2">هياكل الأبواب والنوافذ المعدنية</h3>
-                        <p class="text-slate-400 text-xs mb-4">دعم إضافي وتثبيت متين لإطارات الفتحات والأبواب داخل الجدران.</p>
-                        <div class="text-amber-400 font-bold mb-4">السعر: حسب الطلب</div>
+                        <h3 class="text-lg font-bold mt-1 mb-2">هياكل الأبواب والفتحات المعدنية</h3>
+                        <p class="text-slate-400 text-xs mb-4">تدعيمات معدنية هندسية خاصة لتثبيت إطارات الأبواب والنوافذ.</p>
+                        <div class="text-amber-400 font-bold mb-4 text-sm">حسب التصميم الهندسي</div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addToCart('هياكل الأبواب والنوافذ المعدنية', 'حسب الطلب')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                    <button onclick="addToCart('هياكل الأبواب والفتحات المعدنية', 'حسب التصميم الهندسي')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
             </div>
 
-            <!-- Product 5 -->
+            <!-- Product 6: Double Layer Wall System -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
                     <img src="IMG_5179.jpg" alt="Acoustic Wall System" class="w-full h-48 object-cover bg-slate-950">
                     <div class="p-5">
                         <span class="text-amber-400 text-xs font-bold">Acoustic & Fire Wall</span>
                         <h3 class="text-lg font-bold mt-1 mb-2">أنظمة الجدران المزدوجة العازلة</h3>
-                        <p class="text-slate-400 text-xs mb-4">طبقات عزل صوتي وحراري مع تفاصيل تثبيت هندسية متقدمة.</p>
-                        <div class="text-amber-400 font-bold mb-4">السعر: حسب المواصفات</div>
+                        <p class="text-slate-400 text-xs mb-4">حلول عزل صوتي وحراري مزدوجة مع تفاصيل التثبيت المتقدمة.</p>
+                        <div class="text-amber-400 font-bold mb-4 text-sm">حسب مواصفات العزل</div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addToCart('أنظمة الجدران المزدوجة العازلة', 'حسب المواصفات')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                    <button onclick="addToCart('أنظمة الجدران المزدوجة العازلة', 'حسب مواصفات العزل')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
             </div>
 
-            <!-- Product 6 -->
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
+            <!-- Product 7: Suspended Ceiling System -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between md:col-span-2 lg:col-span-1">
                 <div>
-                    <img src="IMG_5185.JPG" alt="Suspension System" class="w-full h-48 object-cover bg-slate-950">
+                    <img src="IMG_5185.JPG" alt="Suspended Ceiling System" class="w-full h-48 object-cover bg-slate-950">
                     <div class="p-5">
                         <span class="text-amber-400 text-xs font-bold">Suspension System</span>
                         <h3 class="text-lg font-bold mt-1 mb-2">أنظمة الأسقف المستعارة والتعليق</h3>
                         <p class="text-slate-400 text-xs mb-4">قنوات رئيسية وفرعية مع قضبان تعليق قابلة للتعديل ومشبك الفراشة.</p>
-                        <div class="text-amber-400 font-bold mb-4">السعر: حسب المساحة</div>
+                        <div class="text-amber-400 font-bold mb-4 text-sm">حسب مساحة الأسقف</div>
                     </div>
                 </div>
                 <div class="p-5 pt-0">
-                    <button onclick="addToCart('أنظمة الأسقف المستعارة والتعليق', 'حسب المساحة')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                    <button onclick="addToCart('أنظمة الأسقف المستعارة والتعليق', 'حسب مساحة الأسقف')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
@@ -167,7 +184,7 @@
         </div>
     </section>
 
-    <!-- Drywall Partition System Specs (From PDF) -->
+    <!-- Technical System Specs Table (From PDF) -->
     <section id="system" class="py-16 bg-slate-900/30 border-t border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
@@ -255,11 +272,10 @@
         <div class="bg-slate-900 w-full max-w-md h-full border-r border-slate-800 p-6 flex flex-col justify-between">
             <div>
                 <div class="flex justify-between items-center mb-6 border-b border-slate-800 pb-4">
-                    <h3 class="text-xl font-black text-amber-400">سلة الطلبات الخاصة بك</h3>
+                    <h3 class="text-xl font-black text-amber-400">سلة الطلبات والمنتجات</h3>
                     <button onclick="toggleCartModal()" class="text-slate-400 hover:text-white font-bold text-lg">✕</button>
                 </div>
                 <div id="cartItemsList" class="space-y-4 max-h-[60vh] overflow-y-auto">
-                    <!-- Cart items will be injected here -->
                     <p class="text-slate-500 text-center py-8">السلة فارغة حالياً</p>
                 </div>
             </div>
@@ -272,10 +288,10 @@
     </div>
 
     <footer class="bg-slate-950 py-6 text-center text-xs text-slate-500 border-t border-slate-900">
-        جميع الحقوق محفوظة © 2026 LAMCO 1 INDUSTRIAL LTD.
+        جميع الحقوق محفوظة © 2026 LAMCO 1 STEEL FACTORY LTD.
     </footer>
 
-    <!-- Scripts for Cart & Language -->
+    <!-- Cart & Language Scripts -->
     <script>
         let cart = [];
 
@@ -323,17 +339,18 @@
                 alert('السلة فارغة!');
                 return;
             }
-            let message = "السلام عليكم، أرغب في طلب المنتجات التالية من مصنع لامكو الأول:\n\n";
+            let message = "السلام عليكم، أرغب في طلب المنتجات التالية من مصنع لامكو الأول للحديد:\n\n";
             cart.forEach((item, i) => {
                 message += `${i + 1}. ${item.name} (${item.price})\n`;
             });
-            message += "\nأرجو تأكيد الطلب.";
+            message += "\nأرجو تأكيد الطلب والتواصل معي.";
             
             const encoded = encodeURIComponent(message);
             window.open(`https://wa.me/966505580244?text=${encoded}`, '_blank');
         }
 
         let currentLang = 'ar';
+        function تفاصيل اللغة() {}
         function toggleLanguage() {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
             const htmlRoot = document.getElementById('htmlRoot');
