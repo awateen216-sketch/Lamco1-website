@@ -19,7 +19,7 @@
             </div>
             <nav class="hidden md:flex gap-6 text-sm font-semibold">
                 <a href="#store" class="hover:text-amber-400 transition">المنتجات والأقسام</a>
-                <a href="#admin-panel" class="text-amber-400 hover:underline transition">➕ إضافة منتج جديد</a>
+                <a href="#admin-panel" class="text-amber-400 hover:underline transition">⚙️ لوحة التحكم والإدارة</a>
                 <a href="#contact" class="hover:text-amber-400 transition">اتصل بنا</a>
             </nav>
             <div class="flex items-center gap-3">
@@ -34,52 +34,80 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-slate-900 to-slate-950 py-16 border-b border-slate-800 text-center px-4">
-        <div class="max-w-4xl mx-auto">
-            <span class="text-amber-400 font-bold tracking-widest uppercase text-xs bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">LAMCO 1 STEEL FACTORY LTD - س.ت: 7038142050</span>
-            <h1 class="text-3xl md:text-5xl font-black mt-4 mb-4">مصنع لامكو الأول للحديد والتشكيلة المعدنية</h1>
-            <p class="text-slate-300 text-sm md:text-base mb-8">الريادة في تصنيع مقاطع الجدران الجافة وأنظمة الأسقف المستعارة المطابقة للمواصفات العالمية (ASTM C645).</p>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="#store" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl transition text-sm shadow-lg shadow-amber-500/20">
-                    🛍️ استعرض المنتجات
-                </a>
-                <a href="#admin-panel" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 font-bold px-6 py-3 rounded-xl transition text-sm">
-                    ➕ أضف منتجك وصورته بنفسك
-                </a>
+    <!-- Dynamic Hero Banner Section with Machine & Coil Roll Image Support -->
+    <section class="bg-gradient-to-b from-slate-900 to-slate-950 py-16 border-b border-slate-800 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <span id="bannerBadge" class="text-amber-400 font-bold tracking-widest uppercase text-xs bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">LAMCO 1 STEEL FACTORY LTD - س.ت: 7038142050</span>
+                <h1 id="bannerTitle" class="text-3xl md:text-5xl font-black mt-4 mb-4">مصنع لامكو الأول للحديد والتشكيلة المعدنية</h1>
+                <p id="bannerDesc" class="text-slate-300 text-sm md:text-base mb-8">الريادة في تصنيع مقاطع الجدران الجافة وأنظمة الأسقف المستعارة وخطوط كويل رول المطابقة للمواصفات العالمية.</p>
+                <div class="flex gap-4">
+                    <a href="#store" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl transition text-sm shadow-lg">استعرض المنتجات</a>
+                    <a href="#admin-panel" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 font-bold px-6 py-3 rounded-xl transition text-sm">تعديل البنر والمصنع ⚙️</a>
+                </div>
+            </div>
+            <div id="bannerImageContainer" class="bg-slate-900 border border-slate-800 rounded-3xl p-4 flex items-center justify-center relative overflow-hidden h-72 shadow-2xl">
+                <!-- افتراضي صورة تعبيرية للمكينة والكويل -->
+                <div id="defaultBannerImg" class="text-center">
+                    <div class="text-amber-400 text-6xl mb-2">⚙️🏭</div>
+                    <span class="text-xs text-slate-400 font-bold">صورة مكينة الكويل رول (يمكنك تغييرها من لوحة التحكم أدناه)</span>
+                </div>
+                <img id="customBannerImgEl" src="" alt="Machine & Coil Roll" class="absolute inset-0 w-full h-full object-cover hidden">
             </div>
         </div>
     </section>
 
-    <!-- Admin Panel: Add Custom Product with Image -->
+    <!-- Unified Admin Panel: Manage Store Products & Banner -->
     <section id="admin-panel" class="py-12 bg-slate-900/50 border-b border-slate-800">
-        <div class="max-w-2xl mx-auto px-4 bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
-            <h2 class="text-xl font-black mb-2 text-amber-400 flex items-center gap-2"><span>➕</span> لوحة إضافة منتج جديد مع صورة</h2>
-            <p class="text-slate-400 text-xs mb-6">أدخل بيانات المنتج، ارفع صورته من جهازك، وسيتم إضافته فوراً للكتالوج.</p>
+        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <form id="addProductForm" onsubmit="handleAddNewProduct(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-slate-300 mb-1">اسم المنتج:</label>
-                    <input type="text" id="newProductName" required placeholder="مثال: قطاع حديدي مخصص..." class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 focus:outline-none focus:border-amber-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold text-slate-300 mb-1">وصف المنتج:</label>
-                    <textarea id="newProductDesc" required placeholder="اكتب وصفاً مختصراً للمواصفات..." rows="2" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 focus:outline-none focus:border-amber-500"></textarea>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Form 1: Add New Product -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                <h2 class="text-lg font-black mb-2 text-amber-400 flex items-center gap-2"><span>➕</span> إضافة منتج جديد مع صورة</h2>
+                <p class="text-slate-400 text-xs mb-4">تحكم كامل بإضافة وحذف المنتجات ورفع صورها من جهازك مباشرة.</p>
+                
+                <form id="addProductForm" onsubmit="handleAddNewProduct(event)" class="space-y-3">
                     <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">السلسلة / التصنيف:</label>
-                        <input type="text" id="newProductSeries" required placeholder="مثال: Custom Series" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 focus:outline-none focus:border-amber-500">
+                        <label class="block text-xs font-bold text-slate-300 mb-1">اسم المنتج:</label>
+                        <input type="text" id="newProductName" required placeholder="مثال: قطاع حديدي مخصص..." class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-2.5 focus:outline-none focus:border-amber-500">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold text-slate-300 mb-1">صورة المنتج من جهازك:</label>
-                        <input type="file" id="newProductImage" accept="image/*" required class="w-full bg-slate-950 border border-slate-700 text-slate-400 text-xs rounded-xl p-2 file:bg-amber-500 file:text-slate-950 file:border-0 file:rounded-lg file:px-3 file:py-1 file:font-bold file:text-xs hover:file:bg-amber-400 transition">
+                        <label class="block text-xs font-bold text-slate-300 mb-1">وصف المنتج:</label>
+                        <textarea id="newProductDesc" required placeholder="اكتب وصفاً مختصراً للمواصفات..." rows="2" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-2.5 focus:outline-none focus:border-amber-500"></textarea>
                     </div>
-                </div>
-                <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-sm transition shadow-md">
-                    حفظ ونشر المنتج في الكتالوج 🚀
-                </button>
-            </form>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 mb-1">التصنيف:</label>
+                            <input type="text" id="newProductSeries" required placeholder="مثال: Custom Series" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-2.5 focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 mb-1">صورة المنتج:</label>
+                            <input type="file" id="newProductImage" accept="image/*" required class="w-full bg-slate-950 border border-slate-700 text-slate-400 text-xs rounded-xl file:bg-amber-500 file:text-slate-950 file:border-0 file:rounded-lg file:px-2 file:py-1 file:font-bold file:text-xs">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs transition">إضافة المنتج للكتالوج 🚀</button>
+                </form>
+            </div>
+
+            <!-- Form 2: Customize Banner & Machine Image -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                <h2 class="text-lg font-black mb-2 text-amber-400 flex items-center gap-2"><span>🖼️</span> تخصيص البنر وصورة المكينة</h2>
+                <p class="text-slate-400 text-xs mb-4">تغيير العبارة الترحيبية ورفع صورة المكينة مع خطوط الكويل.</p>
+                
+                <form id="updateBannerForm" onsubmit="handleUpdateBanner(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">العنوان الرئيسي للبنر:</label>
+                        <input type="text" id="bannerTitleInput" placeholder="مصنع لامكو الأول للحديد..." class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-2.5 focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">صورة المكينة والكويل (من جهازك):</label>
+                        <input type="file" id="bannerImageInput" accept="image/*" class="w-full bg-slate-950 border border-slate-700 text-slate-400 text-xs rounded-xl file:bg-amber-500 file:text-slate-950 file:border-0 file:rounded-lg file:px-2 file:py-1 file:font-bold file:text-xs">
+                    </div>
+                    <button type="submit" class="w-full bg-slate-800 hover:bg-slate-700 text-amber-400 border border-slate-700 font-bold py-2.5 rounded-xl text-xs transition">تحديث البنر والمكينة فوراً ✨</button>
+                    <button type="button" onclick="resetBanner()" class="w-full text-rose-400 hover:underline text-xs text-center pt-1">استعادة البنر الافتراضي</button>
+                </form>
+            </div>
+
         </div>
     </section>
 
@@ -87,11 +115,11 @@
     <section id="store" class="py-16 max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-black mb-3">كتالوج المنتجات والأقسام المعتمدة</h2>
-            <p class="text-slate-400 text-sm">عرض تفصيلي لجميع المقاطع الأساسية والمنتجات المضافة حديثاً</p>
+            <p class="text-slate-400 text-sm">إدارة، حذف، واستعراض المنتجات بكل سلاسة</p>
         </div>
 
         <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- يتم تعبئتها تلقائياً -->
+            <!-- يتم تعبئتها تلقائياً برمجياً -->
         </div>
     </section>
 
@@ -139,7 +167,7 @@
         جميع الحقوق محفوظة © 2026 LAMCO 1 STEEL FACTORY LTD | السجل التجاري: 7038142050
     </footer>
 
-    <!-- Script Handling Products, Images & Cart -->
+    <!-- Script Handling Full Store, Products, Deletions, and Banner Config -->
     <script>
         const defaultProducts = [
             {
@@ -191,7 +219,7 @@
             grid.innerHTML = '';
             const allProducts = [...defaultProducts, ...customProducts];
 
-            allProducts.forEach((p, index) => {
+            allProducts.forEach((p) => {
                 let imageHTML = '';
                 if (p.isDefaultImage) {
                     imageHTML = `
@@ -255,7 +283,7 @@
                     localStorage.setItem('lamco_custom_products', JSON.stringify(customProducts));
                     renderProducts();
                     document.getElementById('addProductForm').reset();
-                    alert('تمت إضافة المنتج وصورته بنجاح إلى الكتالوج!');
+                    alert('تمت إضافة المنتج بنجاح إلى الكتالوج!');
                     window.location.href = '#store';
                 };
                 reader.readAsDataURL(file);
@@ -263,13 +291,56 @@
         }
 
         function deleteCustomProduct(id) {
-            if (confirm('هل أنت متأكد من حذف هذا المنتج المضاف؟')) {
+            if (confirm('هل أنت متأكد من حذف هذا المنتج؟')) {
                 customProducts = customProducts.filter(p => p.id !== id);
                 localStorage.setItem('lamco_custom_products', JSON.stringify(customProducts));
                 renderProducts();
             }
         }
 
+        // Banner & Machine Customization Logic
+        function handleUpdateBanner(event) {
+            event.preventDefault();
+            const title = document.getElementById('bannerTitleInput').value;
+            const fileInput = document.getElementById('bannerImageInput');
+            const file = fileInput.files[0];
+
+            if (title) {
+                localStorage.setItem('lamco_banner_title', title);
+                document.getElementById('bannerTitle').innerText = title;
+            }
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    localStorage.setItem('lamco_banner_img', e.target.result);
+                    applyBannerImage(e.target.result);
+                    alert('تم تحديث صورة المكينة والكويل للبنر بنجاح!');
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('تم تحديث بيانات البنر بنجاح!');
+            }
+        }
+
+        function applyBannerImage(src) {
+            const defImg = document.getElementById('defaultBannerImg');
+            const customImg = document.getElementById('customBannerImgEl');
+            defImg.classList.add('hidden');
+            customImg.src = src;
+            customImg.classList.remove('hidden');
+        }
+
+        function resetBanner() {
+            localStorage.removeItem('lamco_banner_title');
+            localStorage.removeItem('lamco_banner_img');
+            document.getElementById('bannerTitle').innerText = 'مصنع لامكو الأول للحديد والتشكيلة المعدنية';
+            document.getElementById('defaultBannerImg').classList.remove('hidden');
+            document.getElementById('customBannerImgEl').classList.add('hidden');
+            alert('تمت استعادة الإعدادات الافتراضية للبنر.');
+        }
+
+        // Cart Logic
         let cart = [];
         function addToCart(productName) {
             cart.push({ name: productName });
@@ -304,12 +375,21 @@
             if (cart.length === 0) { alert('السلة فارغة!'); return; }
             let message = "السلام عليكم، أرغب في طلب المنتجات التالية من مصنع لامكو الأول للحديد (س.ت: 7038142050):\n\n";
             cart.forEach((item, i) => { message += `${i + 1}. ${item.name}\n`; });
-            message += "\nأرجو تأكيد الطلب والتواصل معي لتحديد الكميات.";
+            message += "\nأرجو تأكيد الطلب والتواصل معي.";
             window.open(`https://wa.me/966567112167?text=${encodeURIComponent(message)}`, '_blank');
         }
 
         window.onload = function() {
             renderProducts();
+            const savedTitle = localStorage.getItem('lamco_banner_title');
+            if (savedTitle) {
+                document.getElementById('bannerTitle').innerText = savedTitle;
+                document.getElementById('bannerTitleInput').value = savedTitle;
+            }
+            const savedImg = localStorage.getItem('lamco_banner_img');
+            if (savedImg) {
+                applyBannerImage(savedImg);
+            }
         };
 
         let currentLang = 'ar';
@@ -325,4 +405,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
