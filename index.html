@@ -14,11 +14,10 @@
     <header class="bg-slate-900/90 backdrop-blur border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="images/logo.png" alt="Lamco 1 Logo" class="h-14 w-auto">
+                <span class="text-amber-400 font-black text-xl tracking-wider">LAMCO 1</span>
             </div>
             <nav class="hidden md:flex gap-6 text-sm font-semibold">
-                <a href="#store" class="hover:text-amber-400 transition">المنتجات والتسوق</a>
-                <a href="#machinery" class="hover:text-amber-400 transition">الخطوط والماكينات</a>
+                <a href="#store" class="hover:text-amber-400 transition">المنتجات والأقسام</a>
                 <a href="#contact" class="hover:text-amber-400 transition">اتصل بنا</a>
             </nav>
             <div class="flex items-center gap-3">
@@ -33,37 +32,15 @@
         </div>
     </header>
 
-    <!-- Hero Section / Welcome Banner -->
+    <!-- Hero Section -->
     <section class="bg-gradient-to-b from-slate-900 to-slate-950 py-16 border-b border-slate-800 text-center px-4">
         <div class="max-w-4xl mx-auto">
             <span class="text-amber-400 font-bold tracking-widest uppercase text-xs bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">LAMCO 1 STEEL FACTORY LTD - س.ت: 7038142050</span>
-            <h1 class="text-3xl md:text-5xl font-black mt-4 mb-4">مصنع لامكو الأول للحديد والتشكيله المعدنية</h1>
-            <p class="text-slate-300 text-sm md:text-base mb-6">الريادة في تصنيع مقاطع الجدران الجافة (Studs & Runners)، تشكيل الكويلات، وتقديم الأنظمة المعدنية المعتمدة عالية الجودة.</p>
-            <div class="flex justify-center gap-4">
-                <a href="#store" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl transition text-sm shadow-lg shadow-amber-500/20">
-                    🛍️ اذهب للتسوق والمنتجات
-                </a>
-                <a href="files/catalog.pdf" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/40 font-bold px-6 py-3 rounded-xl transition text-sm">
-                    📄 الكتالوج الفني والجداول (PDF)
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Machinery & Coils Section -->
-    <section id="machinery" class="py-12 max-w-6xl mx-auto px-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
-            <div class="w-full md:w-1/2">
-                <img src="images/machine_coil.jpg" alt="Lamco 1 Machine and Coils" class="w-full h-64 object-cover rounded-xl border border-slate-700">
-            </div>
-            <div class="w-full md:w-1/2 text-right">
-                <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">خطوط الإنتاج المتقدمة</span>
-                <h2 class="text-2xl font-black mt-1 mb-3">تقنيات Slitting وتشكيل الكويلات المعتمدة</h2>
-                <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-                    نمتلك أحدث خطوط إنتاج وتشكيل لفات الحديد (Coils) وقص الشرائح بدقة عالية طبقاً للمواصفات القياسية، لإنتاج مقاطع القوائم (STD) والعداءات (RNR) بأبعادها الهندسية الدقيقة وقوة تحمل عالية للمشاريع الكبرى.
-                </p>
-                <a href="#store" class="text-amber-400 hover:text-amber-300 font-bold text-sm inline-flex items-center gap-1">
-                    استعرض المقاسات والأكواد المتاحة ←
+            <h1 class="text-3xl md:text-5xl font-black mt-4 mb-4">مصنع لامكو الأول للحديد والتشكيلة المعدنية</h1>
+            <p class="text-slate-300 text-sm md:text-base mb-8">الريادة في تصنيع مقاطع الجدران الجافة وأنظمة الأسقف المستعارة المطابقة للمواصفات العالمية (ASTM C645).</p>
+            <div>
+                <a href="#store" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-3.5 rounded-xl transition text-sm shadow-lg shadow-amber-500/20 inline-block">
+                    🛍️ استعرض المنتجات والمقاسات الشاملة
                 </a>
             </div>
         </div>
@@ -72,96 +49,147 @@
     <!-- Store & Products Catalog Section -->
     <section id="store" class="py-16 max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-black mb-3">متجر المنتجات والمقاسات الرسمية</h2>
-            <p class="text-slate-400 text-sm">اختر الكود والمقاس الدقيق للمنتج بناءً على جداول المصنع المعتمدة وأضفه إلى السلة</p>
+            <h2 class="text-3xl font-black mb-3">كتالوج المنتجات والأقسام المعتمدة</h2>
+            <p class="text-slate-400 text-sm">عرض تفصيلي لجميع مقاطع الجدران الجافة والأسقف مع إمكانية تحديد المقاسات وإضافتها للسلة</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- Product 1: Galvanized Runner (RNR) -->
+            <!-- 1. Galvanized Runner (RNR) -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
-                    <img src="images/runner.jpg" alt="Galvanized Runner" class="w-full h-48 object-cover bg-slate-950">
-                    <div class="p-5">
-                        <span class="text-amber-400 text-xs font-bold">RNR Series - عداء مجلفن</span>
-                        <h3 class="text-lg font-bold mt-1 mb-2">عداء (Galvanized Runner)</h3>
-                        <p class="text-slate-400 text-xs mb-4">مقاطع العداءات الأفقية (طول الأبعاد حسب الكود).</p>
-                        
-                        <label class="block text-xs font-bold text-slate-300 mb-1">اختر المقاس والكود:</label>
-                        <select id="size-runner" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-2.5 mb-3 focus:outline-none focus:border-amber-500">
-                            <option value="RNR 042 (مقاس 42)">RNR 042 (مقاس 42)</option>
-                            <option value="RNR 048 (مقاس 48)">RNR 048 (مقاس 48)</option>
-                            <option value="RNR 063 (مقاس 63)">RNR 063 (مقاس 63)</option>
-                            <option value="RNR 070 (مقاس 70)">RNR 070 (مقاس 70)</option>
-                            <option value="RNR 075 (مقاس 75)">RNR 075 (مقاس 75)</option>
-                            <option value="RNR 092 (مقاس 92)">RNR 092 (مقاس 92)</option>
-                            <option value="RNR 100 (مقاس 100)">RNR 100 (مقاس 100)</option>
-                            <option value="RNR 125 (مقاس 125)">RNR 125 (مقاس 125)</option>
-                            <option value="RNR 150 (مقاس 150)">RNR 150 (مقاس 150)</option>
-                            <option value="RNR 175 (مقاس 175)">RNR 175 (مقاس 175)</option>
-                            <option value="RNR 200 (مقاس 200)">RNR 200 (مقاس 200)</option>
+                    <div class="h-48 bg-slate-950 border-b border-slate-800 flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10"></div>
+                        <img src="images/RNR.JPG" alt="عداء مجلفن" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-3 right-3 z-20 bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-lg">RNR Series</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-2">عداء مجلفن (Galvanized Runner)[cite: 1]</h3>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">يشكل الإطار المحيطي العلوي والسفلي للفاصل (ASTM C645).</p>
+                        <label class="block text-xs font-bold text-slate-300 mb-2">اختر المقاس والكود:</label>
+                        <select id="size-runner" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 mb-4 focus:outline-none focus:border-amber-500">
+                            <option value="RNR 042 (مقاس 42)">RNR 042</option>
+                            <option value="RNR 048 (مقاس 48)">RNR 048</option>
+                            <option value="RNR 063 (مقاس 63)">RNR 063</option>
+                            <option value="RNR 070 (مقاس 70)">RNR 070</option>
+                            <option value="RNR 075 (مقاس 75)">RNR 075</option>
+                            <option value="RNR 092 (مقاس 92)">RNR 092</option>
+                            <option value="RNR 100 (مقاس 100)">RNR 100</option>
+                            <option value="RNR 125 (مقاس 125)">RNR 125</option>
+                            <option value="RNR 150 (مقاس 150)">RNR 150</option>
+                            <option value="RNR 175 (مقاس 175)">RNR 175</option>
+                            <option value="RNR 200 (مقاس 200)">RNR 200</option>
                         </select>
                     </div>
                 </div>
-                <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('عداء مجلفن (RNR)', 'size-runner')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                <div class="p-6 pt-0">
+                    <button onclick="addSelectedToCart('عداء مجلفن (RNR)', 'size-runner')" class="w-full bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 py-3 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
             </div>
 
-            <!-- Product 2: Galvanized Stud (STD) -->
+            <!-- 2. Galvanized Stud (STD) -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
-                    <img src="images/stud.jpg" alt="Galvanized Stud" class="w-full h-48 object-cover bg-slate-950">
-                    <div class="p-5">
-                        <span class="text-amber-400 text-xs font-bold">STD Series - قوائم رأسية</span>
-                        <h3 class="text-lg font-bold mt-1 mb-2">قوائم رأسية (Galvanized Stud)</h3>
-                        <p class="text-slate-400 text-xs mb-4">مقاطع القوائم الرأسية (طول 300 سم، أبعاد هندسية متعددة).</p>
-                        
-                        <label class="block text-xs font-bold text-slate-300 mb-1">اختر المقاس والكود:</label>
-                        <select id="size-stud" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-2.5 mb-3 focus:outline-none focus:border-amber-500">
-                            <option value="STD 042 (أبعاد 34×40×36)">STD 042 (أبعاد 34×40×36)</option>
-                            <option value="STD 048 (أبعاد 34×46×36)">STD 048 (أبعاد 34×46×36)</option>
-                            <option value="STD 063 (أبعاد 34×61×36)">STD 063 (أبعاد 34×61×36)</option>
-                            <option value="STD 070 (أبعاد 34×68×36)">STD 070 (أبعاد 34×68×36)</option>
-                            <option value="STD 075 (أبعاد 34×73×36)">STD 075 (أبعاد 34×73×36)</option>
-                            <option value="STD 092 (أبعاد 34×90×36)">STD 092 (أبعاد 34×90×36)</option>
-                            <option value="STD 100 (أبعاد 34×98×36)">STD 100 (أبعاد 34×98×36)</option>
-                            <option value="STD 125 (أبعاد 34×123×36)">STD 125 (أبعاد 34×123×36)</option>
-                            <option value="STD 150 (أبعاد 33×148×36)">STD 150 (أبعاد 33×148×36)</option>
-                            <option value="STD 175 (أبعاد 34×173×36)">STD 175 (أبعاد 34×173×36)</option>
-                            <option value="STD 200 (أبعاد 34×198×36)">STD 200 (أبعاد 34×198×36)</option>
+                    <div class="h-48 bg-slate-950 border-b border-slate-800 flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10"></div>
+                        <img src="images/STD.jpg" alt="قوائم رأسية" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-3 right-3 z-20 bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-lg">STD Series</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-2">قوائم رأسية (Galvanized Stud)[cite: 1]</h3>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">المكون الرأسى الأساسي لهياكل الجدران الجافة (ASTM C645).</p>
+                        <label class="block text-xs font-bold text-slate-300 mb-2">اختر المقاس والكود:</label>
+                        <select id="size-stud" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 mb-4 focus:outline-none focus:border-amber-500">
+                            <option value="STD 042 (أبعاد 34×40×36)">STD 042</option>
+                            <option value="STD 048 (أبعاد 34×46×36)">STD 048</option>
+                            <option value="STD 063 (أبعاد 34×61×36)">STD 063</option>
+                            <option value="STD 070 (أبعاد 34×68×36)">STD 070</option>
+                            <option value="STD 075 (أبعاد 34×73×36)">STD 075</option>
+                            <option value="STD 092 (أبعاد 34×90×36)">STD 092</option>
+                            <option value="STD 100 (أبعاد 34×98×36)">STD 100</option>
+                            <option value="STD 125 (أبعاد 34×123×36)">STD 125</option>
+                            <option value="STD 150 (أبعاد 33×148×36)">STD 150</option>
+                            <option value="STD 175 (أبعاد 34×173×36)">STD 175</option>
+                            <option value="STD 200 (أبعاد 34×198×36)">STD 200</option>
                         </select>
                     </div>
                 </div>
-                <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('قوائم رأسية (STD)', 'size-stud')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                <div class="p-6 pt-0">
+                    <button onclick="addSelectedToCart('قوائم رأسية (STD)', 'size-stud')" class="w-full bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 py-3 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
             </div>
 
-            <!-- Product 3: Plasterboard & Accessories -->
+            <!-- 3. Primary Ceiling Channel (C-Channel) -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
                 <div>
-                    <img src="images/plasterboard.jpg" alt="Plasterboard" class="w-full h-48 object-cover bg-slate-950">
-                    <div class="p-5">
-                        <span class="text-amber-400 text-xs font-bold">Drywall Boards</span>
-                        <h3 class="text-lg font-bold mt-1 mb-2">ألواح الجبس والملحقات</h3>
-                        <p class="text-slate-400 text-xs mb-4">ألواح التغطية وملحقات التركيب المعتمدة.</p>
-                        
-                        <label class="block text-xs font-bold text-slate-300 mb-1">اختر النوع والمواصفات:</label>
-                        <select id="size-board" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-2.5 mb-3 focus:outline-none focus:border-amber-500">
-                            <option value="لوح جبس عادي 9.5 مم">لوح جبس عادي 9.5 مم</option>
-                            <option value="لوح جبس عادي 12.5 مم">لوح جبس عادي 12.5 مم</option>
-                            <option value="لوح جبس مقاوم للحريق 12.5 مم">لوح جبس مقاوم للحريق 12.5 مم</option>
-                            <option value="لوح جبس مقاوم للرطوبة 12.5 مم">لوح جبس مقاوم للرطوبة 12.5 مم</option>
+                    <div class="h-48 bg-slate-950 border-b border-slate-800 flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10"></div>
+                        <img src="images/c channel.JPG" alt="قنوات السقف الأساسية" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-3 right-3 z-20 bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-lg">C-Channel</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-2">قنوات السقف الأساسية (C-Channel)[cite: 1]</h3>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">الدعم الرئيسي لقنوات الفارينج في الأسقف المستعارة (أبعاد 11×38×11 مم)[cite: 1].</p>
+                        <label class="block text-xs font-bold text-slate-300 mb-2">اختر المواصفات:</label>
+                        <select id="size-pcc" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 mb-4 focus:outline-none focus:border-amber-500">
+                            <option value="C-Channel - طول قياسي 3 متر">C-Channel - طول 3 متر (سُمك 0.35 - 1.0 مم)</option>
                         </select>
                     </div>
                 </div>
-                <div class="p-5 pt-0">
-                    <button onclick="addSelectedToCart('ألواح الجبس', 'size-board')" class="w-full bg-slate-800 hover:bg-amber-600 hover:text-slate-950 text-amber-400 border border-slate-700 py-2.5 rounded-xl font-bold text-sm transition">
+                <div class="p-6 pt-0">
+                    <button onclick="addSelectedToCart('قنوات السقف الأساسية (C-Channel)', 'size-pcc')" class="w-full bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 py-3 rounded-xl font-bold text-sm transition">
+                        أضف إلى السلة 🛒
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Furring Channel -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
+                <div>
+                    <div class="h-48 bg-slate-950 border-b border-slate-800 flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10"></div>
+                        <img src="images/furring.jpeg" alt="قنوات الفارينج" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-3 right-3 z-20 bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-lg">Furring</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-2">قنوات الفارينج (Furring Channel)[cite: 1]</h3>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">القطاع الداعم الذي يتم تثبيت ألواح الجبس عليه (أبعاد 12×22.5×22×12 مم)[cite: 1].</p>
+                        <label class="block text-xs font-bold text-slate-300 mb-2">اختر المواصفات:</label>
+                        <select id="size-fcl" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 mb-4 focus:outline-none focus:border-amber-500">
+                            <option value="Furring Channel - قطاع فرعي للسقف والجدران">Furring - قياسي</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addSelectedToCart('قنوات الفارينج (Furring)', 'size-fcl')" class="w-full bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 py-3 rounded-xl font-bold text-sm transition">
+                        أضف إلى السلة 🛒
+                    </button>
+                </div>
+            </div>
+
+            <!-- 5. L-Angle -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500 transition flex flex-col justify-between">
+                <div>
+                    <div class="h-48 bg-slate-950 border-b border-slate-800 flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent z-10"></div>
+                        <img src="images/l angle.JPG" alt="زاوية المحيط" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-3 right-3 z-20 bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-lg">L-Angle</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black mb-2">زاوية المحيط (L-Angle)[cite: 1]</h3>
+                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">تثبت على الجوانب لاستقبال نهايات قنوات الفارينج وألواح الجبس (25×25 مم)[cite: 1].</p>
+                        <label class="block text-xs font-bold text-slate-300 mb-2">اختر المواصفات:</label>
+                        <select id="size-pan" class="w-full bg-slate-950 border border-slate-700 text-slate-200 text-xs rounded-xl p-3 mb-4 focus:outline-none focus:border-amber-500">
+                            <option value="L-Angle - زاوية محيطية 25×25 مم">L-Angle - 25×25 مم[cite: 1]</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="p-6 pt-0">
+                    <button onclick="addSelectedToCart('زاوية المحيط (L-Angle)', 'size-pan')" class="w-full bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-amber-400 border border-slate-700 py-3 rounded-xl font-bold text-sm transition">
                         أضف إلى السلة 🛒
                     </button>
                 </div>
@@ -214,7 +242,7 @@
         جميع الحقوق محفوظة © 2026 LAMCO 1 STEEL FACTORY LTD | السجل التجاري: 7038142050
     </footer>
 
-    <!-- Cart Script -->
+    <!-- Cart & Language Script -->
     <script>
         let cart = [];
         function addSelectedToCart(name, selectId) {
